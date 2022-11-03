@@ -4,25 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".MessageFragment">
+    tools:context=".EncryptFragment" >
 
-    <EditText
-        android:id="@+id/message"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/message_hint"
-        android:inputType="textMultiLine"
-        android:text="My Default Text"
-        android:textSize="20sp" />
-
-    <Button
-        android:id="@+id/next"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/next" />
-
+        android:textSize="20sp"
+        android:text="@string/encrypt_text" />
+    <TextView
+        android:id="@+id/encrypted_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp" />
 </LinearLayout>
