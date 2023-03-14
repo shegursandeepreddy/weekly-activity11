@@ -15,10 +15,12 @@ class MessageFragment : Fragment() {
         val view =  inflater.inflate(R.layout.fragment_message, container, false)
         val nextButton = view.findViewById<Button>(R.id.next)
         val messageView = view.findViewById<EditText>(R.id.message)
+        val messageView2 = view.findViewById<EditText>(R.id.message2)
 
         nextButton.setOnClickListener {
             val message = messageView.text.toString()
-            val action = MessageFragmentDirections.actionMessageFragmentToEncryptFragment(message)
+            val message2= messageView2.text.toString()
+            val action = MessageFragmentDirections.actionMessageFragmentToEncryptFragment(message,message2)
             view.findNavController().navigate(action)
         }
 

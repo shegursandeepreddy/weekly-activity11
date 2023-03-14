@@ -31,5 +31,26 @@
         <argument
             android:name="message"
             app:argType="string" />
+        <argument
+            android:name="message2"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_messageFragment_to_encryptFragment"
+            app:destination="@id/encryptFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/encryptFragment2"
+        android:name="com.mdev.secretmessage.EncryptFragment2"
+        android:label="fragment_encrypt2"
+        tools:layout="@layout/fragment_encrypt" >
+        <action
+            android:id="@+id/action_messageFragment_to_encryptFragment"
+            app:destination="@id/encryptFragment2" />
+        <argument
+            android:name="message"
+            app:argType="string" />
+        <argument
+            android:name="message2"
+            app:argType="string" />
     </fragment>
 </navigation>
