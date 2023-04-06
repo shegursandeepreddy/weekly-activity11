@@ -27,6 +27,12 @@
         android:text="My Default Text2"
         android:textSize="20sp" />
 
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="48dp"
+        android:layout_height="48dp">
+
+    </CheckBox>
     <Button
         android:id="@+id/next"
         android:layout_width="wrap_content"

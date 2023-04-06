@@ -17,14 +17,23 @@ class EncryptFragment : Fragment() {
         val nextButton = view.findViewById<Button>(R.id.button2)
         val message = EncryptFragmentArgs.fromBundle(requireArguments()).message
         val message2 =  EncryptFragmentArgs.fromBundle(requireArguments()).message2
+        val check = EncryptFragmentArgs.fromBundle(requireArguments()).check
         val encryptedView = view.findViewById<TextView>(R.id.encrypted_message)
 
-        encryptedView.text = message.reversed()
+
+        if (check ) {
+            encryptedView.text = message.reversed()
+
+        }else{
+            encryptedView.text = message
+        }
 
         nextButton.setOnClickListener {
             val message2= message2
-            val action = MessageFragmentDirections.actionMessageFragmentToEncryptFragment(message,message2)
+            val action = MessageFragmentDirections.actionMessageFragmentToEncryptFragment(message,message2,check)
             view.findNavController().navigate(action)
+
+
         }
         return view
     }

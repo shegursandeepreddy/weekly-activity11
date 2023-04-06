@@ -13,9 +13,15 @@ class EncryptFragment2  : Fragment()  {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_encrypt2, container, false)
         val message = EncryptFragmentArgs.fromBundle(requireArguments()).message2
+        val check = EncryptFragmentArgs.fromBundle(requireArguments()).check
         val encryptedView = view.findViewById<TextView>(R.id.encrypted_message2)
 
-        encryptedView.text = message.reversed()
+        if (check ) {
+            encryptedView.text = message.reversed()
+
+        }else{
+            encryptedView.text = message
+        }
         return view
     }
 }

@@ -34,6 +34,9 @@
         <argument
             android:name="message2"
             app:argType="string" />
+        <argument
+            android:name="check"
+            app:argType="boolean" />
         <action
             android:id="@+id/action_messageFragment_to_encryptFragment"
             app:destination="@id/encryptFragment2" />
@@ -52,5 +55,8 @@
         <argument
             android:name="message2"
             app:argType="string" />
+        <argument
+            android:name="check"
+            app:argType="boolean" />
     </fragment>
 </navigation>
